@@ -99,10 +99,9 @@ Resources:
           systemctl start apache2.service
           sudo rm /var/www/html/index.html
           cd /var/www/html
-          aws s3 cp s3://ecda96ae-ff56-11eb-8ea2-07f18a8907cd-b2/index.html .
+          aws s3 cp s3://083844963766-b1/index.html .
           systemctl restart apache2.service
       ImageId: !Ref ImageId
-      KeyName: udakeypair2
       IamInstanceProfile: !Ref ProfileWithRolesForOurApp
       SecurityGroups:
       - Ref: WebServerSecGroup
